@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang cá nhân cải tiến</title>
+    <link rel="stylesheet" href="reworktcn.css"> 
+</head>
+<body>
+    <!-- Header Section -->
+    <div class="header-wrapper">
+        <header class="profile-header">
+            <img src="Selfie.jpg" alt="Ảnh cá nhân" class="profile-image">
+            <h1>Lê Trung Hiếu</h1>
+            <div class="logo-wrapper">
+                <a href="https://www.facebook.com/profile.php?id=100046663641547" target="_blank">
+                    <img src="Facebook.jpg" alt="Facebook" class="logo-circle">
+                </a>
+                <a href="https://www.instagram.com/trunghieu9147/" target="_blank">
+                    <img src="Instagram.jpg" alt="Instagram" class="logo-circle">
+                </a>
+                <a href="https://www.youtube.com/@two002zero3" target="_blank">
+                    <img src="youtube.png" alt="YouTube" class="logo-circle">
+                </a>
+            </div>
+        </header>
+    </div>
+    
+    <!-- Navigation Menu -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="#" onclick="showSection('about-me')">Introduce</a></li>
+            <li><a href="#" onclick="showSection('education')">Learning Process</a></li>
+            <li><a href="#" onclick="showSection('skills')">Skills</a></li>
+            <li><a href="#" onclick="showSection('work-goals')">Job Orientation</a></li>
+            <li><a href="#" onclick="showSection('coursework')">Course Exercises</a></li>
+            <li><a href="#" onclick="showSection('projects')">Projects</a></li>
+            <li><a href="#" onclick="showSection('contact')">Contact</a></li>
+            <li><a href="#" onclick="showSection('blog')">Blog</a></li>
+            <li><a href="#" onclick="showSection('other-resources')">Other Resources</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container" id="content-container">
+        <!-- About Section -->
+        <section id="about-me" class="content-section">
+            <div class="card">
+                <div class="card-header">
+                    <img src="gioithieu.jpg" alt="Icon" class="card-icon">
+                    <h2>Giới thiệu (Introduce)</h2>
+                </div>
+                <p>Helloooo everybody! I’m Le Trung Hieu, a student with a passion for programming...</p>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="content-section">
+            <div class="card">
+                <div class="card-header">
+                    <img src="quatrinhhoctap.png" alt="Icon" class="card-icon">
+                    <h2>Quá trình học tập (Learning Process)</h2>
+                </div>
+                <p>I’m currently studying at Hanoi Metropolitan University...</p>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="content-section">
+            <div class="card">
+                <div class="card-header">
+                    <img src="kynang.jpg" alt="Skills" class="card-icon">
+                    <h2>Kỹ năng (Skills)</h2>
+                </div>
+                <ul>
+                    <li>Knowledge of C and C++</li>
+                    <li>HTML, CSS, and JavaScript</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Work Goals Section -->
+        <section id="work-goals" class="content-section">
+            <div class="card">
+                <div class="card-header">
+                    <img src="dinhhuongCV.jpg" alt="Icon" class="card-icon">
+                    <h2>Định hướng công việc (Job Orientation)</h2>
+                </div>
+                <p>My goal is to become a proficient software developer...</p>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="content-section">
+            <div class="card">
+                <div class="card-header">
+                    <img src="projects.jpg" alt="Projects" class="card-icon">
+                    <h2>Projects</h2>
+                </div>
+                <p>Some of my exciting projects include building a website, mobile applications, and more...</p>
+            </div>
+        </section>
+
+        <section id="coursework" class="content-section"></section>
+            <div class="card">
+                <div class="card-header">
+                    <img src="" alt="Course" class="card-icon">
+                    <h2>Course</h2>
+                </div>
+                <p>Some of my exciting projects include building a website, mobile applications, and more...</p>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="content-section">
+            <div class="card">
+                <div class="card-header">
+                    <img src="contact.jpg" alt="Contact" class="card-icon">
+                    <h2>Contact</h2>
+                </div>
+                <p>Feel free to reach out to me through my social media platforms or email: contact@example.com</p>
+            </div>
+        </section>
+
+        <!-- Blog Section -->
+        <section id="blog" class="content-section">
+            <div class="card">
+                <div class="card-header">
+                    <img src="blog.jpg" alt="Blog" class="card-icon">
+                    <h2>Blog</h2>
+                </div>
+                <p>I write about my experiences in programming, technology trends, and personal growth...</p>
+            </div>
+        </section>
+
+        <!-- Other Resources Section -->
+        <section id="other-resources" class="content-section">
+            <div class="card">
+                <div class="card-header">
+                    <img src="resources.jpg" alt="Resources" class="card-icon">
+                    <h2>Other Resources</h2>
+                </div>
+                <p>Here you can find additional materials and resources to help you in your learning journey...</p>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; Bản quyền-ed by Híu Trung</p>
+    </footer>
+
+    <!-- JS for Navigation -->
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('.content-section .card');
+            sections.forEach(section => {
+                section.style.display = 'none';
+            });
+            const selectedSection = document.querySelector(`#${sectionId} .card`);
+            if (selectedSection) {
+                selectedSection.style.display = 'block';
+            }
+        }
+        document.addEventListener('DOMContentLoaded', () => {
+            showSection('about-me');
+        });
+    </script>
+</body>
+</html>

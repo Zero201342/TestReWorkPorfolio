@@ -1,0 +1,290 @@
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #0044cc;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.navbar ul li a:hover {
+    background-color: #003399;
+}
+
+/* Card Styling */
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    margin: 20px 0;
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+    margin-bottom: 15px;
+}
+
+/* Profile Image */
+.profile-image {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    border: 3px solid #0044cc;
+}
+
+/* Header Styling */
+.header-wrapper {
+    background-color: #f0f0f0;
+    padding: 20px;
+    text-align: center;
+}
+
+.profile-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-wrapper {
+    display: flex;
+}
+
+.logo-circle {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+/* Sections Styling */
+#about-me, #education, #skills, #work-goals, #projects, #contact, #blog, #other-resources {
+    margin-top: 30px;
+}
+
+/* Footer */
+footer {
+    background-color: #0044cc;
+    color: white;
+    text-align: center;
+    padding: 20px 0; /* Fixed this padding */
+}
+
+footer p {
+    margin: 0;
+    font-size: 1.1em;
+}
+
+/* Project section styling */
+#projects {
+    background-color: #e0f7fa;
+    padding: 20px;
+}
+
+#projects .card-header {
+    background-color: #0044cc;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Contact section styling */
+#contact {
+    background-color: #e8f5e9;
+    padding: 20px;
+}
+
+#contact .card-header {
+    background-color: #2e7d32;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Blog section styling */
+#blog {
+    background-color: #f3e5f5;
+    padding: 20px;
+}
+
+#blog .card-header {
+    background-color: #9c27b0;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Other Resources section styling */
+#other-resources {
+    background-color: #ffeb3b;
+    padding: 20px;
+}
+
+#other-resources .card-header {
+    background-color: #f57f17;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    .navbar ul li {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .profile-header {
+        flex-direction: column;
+    }
+
+    .profile-image {
+        margin-bottom: 20px;
+    }
+
+    .card {
+        padding: 15px;
+    }
+}
+
+/* Hover effects for card headers */
+.card-header:hover {
+    background-color: #333;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+/* Transition effect for cards */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Logo hover effect */
+.logo-circle:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+/* Animation for sections */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.content-section {
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Additional padding for content */
+.container {
+    padding: 20px;
+}
+
+/* Spacing adjustments */
+.section-title {
+    margin-bottom: 15px;
+}
+
+/* List item styling */
+ul li {
+    margin-bottom: 10px;
+}
+
+li {
+    list-style-type: circle;
+}
+
+/* Section colors for visual distinction */
+#skills {
+    background-color: #bbdefb;
+}
+
+#work-goals {
+    background-color: #ffcdd2;
+}
+
+/* Enhancements for readability */
+h1, h2 {
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+}
+
+/* Form elements for contact (Optional future extension) */
+.contact-form {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    background-color: #0044cc;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #003399;
+}
+
+.card-footer {
+    text-align: right;
+    margin-top: 10px;
+}
+
+.card-footer a {
+    color: #0044cc;
+    text-decoration: none;
+}
+
+.card-footer a:hover {
+    text-decoration: underline;
+}
